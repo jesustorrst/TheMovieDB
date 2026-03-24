@@ -1,0 +1,20 @@
+<div
+  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+>
+  <img
+    class="w-full h-auto object-cover"
+    [src]="
+      'https://image.tmdb.org/t/p/w500' +
+      movie()?.poster_path
+    "
+    alt="poster de {{ movie()?.title }}"
+  />
+  <div class="p-4">
+    <h3 class="font-bold text-lg truncate">
+      {{ movie()?.title }}
+    </h3>
+    <p class="text-sm text-gray-500 uppercase">
+      {{ movie()?.original_language }}
+    </p>
+  </div>
+</div>

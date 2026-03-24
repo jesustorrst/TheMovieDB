@@ -1,0 +1,116 @@
+<form
+  class="sh-reservation-form"
+  [formGroup]="reservationForm"
+>
+  <article class="sh-reservation-form__field">
+    <label for="date-reservation">Elegir fecha</label>
+    <input
+      type="date"
+      id="date-reservation"
+      formControlName="dateReservation"
+    />
+  </article>
+
+  <article class="sh-reservation-form__field">
+    <label for="time-reservation">Elegir hora</label>
+    <input
+      type="time"
+      id="time-reservation"
+      formControlName="timeReservation"
+    />
+  </article>
+
+  <app-button
+    text="Reservar ticket"
+    [isDisabled]="reservationForm.invalid"
+    (click)="onReserve()"
+  />
+</form>
+
+<!-- (onAccept)="saveReservation()"
+  [preventAction]="modalReservationForm.invalid" -->
+
+<section>
+  <app-modal>
+    <h1 class="sh-reservation-modal__title">
+      Reservar Ticket
+    </h1>
+
+    <form
+      class="sh-reservation-modal"
+      [formGroup]="reservationModalForm"
+    >
+      <article>
+        <label for="reservation-date">Fecha:</label>
+        <input
+          type="date"
+          id="reservation-date"
+          formControlName="dateReservation"
+        />
+      </article>
+
+      <article>
+        <label for="reservation-time">Hora:</label>
+        <input
+          type="time"
+          id="reservation-time"
+          formControlName="timeReservation"
+        />
+      </article>
+
+      <article>
+        <label for="user-names">Nombres:</label>
+        <input
+          type="text"
+          id="user-names"
+          formControlName="fullName"
+        />
+      </article>
+
+      <article>
+        <label for="user-last-names">Apellidos:</label>
+        <input
+          type="text"
+          id="user-last-names"
+          formControlName="lastName"
+        />
+      </article>
+
+      <article>
+        <label for="user-age">Edad:</label>
+        <input
+          type="number"
+          id="user-age"
+          formControlName="age"
+        />
+      </article>
+
+      <article>
+        <label for="user-address">Dirección:</label>
+        <input
+          type="text"
+          id="user-address"
+          formControlName="address"
+        />
+      </article>
+
+      <article>
+        <label for="user-email">Email:</label>
+        <input
+          type="email"
+          id="user-email"
+          formControlName="email"
+        />
+      </article>
+
+      <article>
+        <label for="user-seats">Número de asientos:</label>
+        <input
+          type="number"
+          id="user-seats"
+          formControlName="numberSeats"
+        />
+      </article>
+    </form>
+  </app-modal>
+</section>

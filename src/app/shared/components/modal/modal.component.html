@@ -1,0 +1,24 @@
+<div
+  class="sh-modal"
+  [class.is-active]="modalBusService.modalState$ | async"
+>
+  <section class="sh-modal__window">
+    <button
+      class="sh-modal__close"
+      (click)="modalBusService.closeModal()"
+    >
+      ❌
+    </button>
+    <ng-content />
+
+    <article>
+      <app-button text="Cancelar" />
+      <app-button
+        text="Aceptar"
+        [isDisabled]="preventAction()"
+      />
+    </article>
+
+    <!-- modal.event-bus.service.ts -->
+  </section>
+</div>

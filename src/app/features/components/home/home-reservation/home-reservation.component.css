@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: var(--third-color);
+}
+.sh-reservation-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sh-reservation-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sh-reservation-form__field label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sh-reservation-form__field input {
+  padding: 0.25em 0.5rem;
+  border: 2px solid #a9adac;
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: #4e4d4d;
+  color: #fff;
+  transition: border-color 0.3s ease-out;
+}
+.sh-reservation-form__field input:focus {
+  border-color: var(--primary-color);
+}
+.sh-reservation-modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.sh-reservation-modal__title {
+  font-size: 2rem;
+  margin-block-end: 1rem;
+}
+.sh-reservation-modal article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sh-reservation-modal input {
+  border: 1px solid #fff;
+}
